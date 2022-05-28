@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 1366px;
+            height: 600px;
+            margin: 0 auto;
+            /* background-color: pink; */
+            background-image: url(./images/bg.jpg);
+
+            overflow: hidden;
+            /* 超出父级范围的内容隐藏 */
+        }
+
+        .box::before,
+        .box::after {
+            content:'';
+            float: left;
+            width: 50%;
+            height: 600px;
+            background-image: url(./images/fm.jpg);
+        }
+
+        .box::after {
+            background-position: right 0;
+        }
+
+        .box:hover::before {
+            transform: translate(-100%);
+            transition: all 2s;
+        }
+
+        .box:hover::after {
+            transform: translate(100%);
+            transition: all 2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

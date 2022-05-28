@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .box {
+            width: 249px;
+            height: 210px;
+            margin: 50px auto;
+            /* 超出父级的内容隐藏 */
+            overflow: hidden;
+        }
+        
+        .box .pic {
+            position: relative;
+
+        }
+        .box p {
+            color: #3b3b3b;
+            padding: 10px 10px 0 10px;
+        }
+
+
+
+        /* 1、播放按钮盒子，压在img标签的上面（定位）
+            2、hover的时候缩放效果 */
+        .box .pic::after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            /* margin-top: -29px;
+            margin-left: -29px; */
+            /* transform: translate(-50%,-50%); */
+            /* 两个transfoer层叠，第一个被覆盖。 */
+
+
+            content:'';
+            width: 58px;
+            height: 58px;
+            background-image: url(./images/play.png);
+
+            transform: translate(-50%,-50%) scale(5);
+            opacity: 0;
+            /* 透明度 */
+
+            /* 过渡 */
+            transition: all 3s;
+        }
+
+        /* 鼠标移入li，让after有变化 */
+        .box li:hover .pic::after {
+            opacity: 1;
+            transform: translate(-50%,-50%) scale(1);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <div class="pic">
+                    <img src="./images/party.jpeg" alt=""></div>
+                    <!--伪元素添加播放按钮  -->
+                <p>【和平精英】“初火”音乐概念片：四圣觉醒......</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

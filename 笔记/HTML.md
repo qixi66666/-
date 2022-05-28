@@ -1,0 +1,82 @@
+
+# html 基础
+
+## 表单标签
+
+使用场景局限，登陆页面注册页面和搜索页面。
+
+### input系列标签
+
+```html
+<input type="">
+文本框<input type="text">
+密码框 <input type="password">
+单选框：<input type="radio">
+多选框：<input type="checkbox">
+上传文件：<input type="file">
+提交按钮：<input type="submit">
+```
+
+# CSS进阶
+
+选择器：
+
+- 后代选择器：用空格隔开
+- 子代选择器：用>选择到指定子代
+- 并集选择器：用，隔开，统一加CSS
+- 交集选择器：选择同时满足多个选择器的标签，(.)连着写不能加任何其他符号
+- 伪类选择器：鼠标指针悬停时改变颜色
+
+背景：
+
+- 背景色：background-color:pink
+- 背景图：background-image: url（./）
+- 背景平铺：background-repeat
+- 背景不平铺：background-repeat：no-repaet
+- 背景位置：background-position: center/top/left/right/bottom;
+- 背景位置：background-position:50px 100px；
+
+# 盒子模型
+
+- 边框：border
+- 内边距：padding
+- 外边距：margin
+- 去掉列表符号：list-style:none;
+- 版心居中：margin：0 auto；
+
+# CSS书写顺序
+
+- 浏览器的执行速度会更高
+- 浮动
+- 盒子模型：border padding margin 宽度高度背景色
+- 文字样式
+
+# css浮动
+
+- 浮动：float
+
+# 定位
+
+- 定位         position
+- 相对定位     position:relative; 
+- 绝对定位     position:absolute; 
+- 固定定位     position:fixed;    
+- 显示层级     z-index: *;        
+- 垂直方向居中  vertical-algin: middle;  
+
+# 制作网页的三种布局方式
+
+- 标准流
+- 浮动
+- 定位
+
+# 位移
+
+- 位移          transform: translate(*px,*px);      
+- 旋转          transform: rotate(*deg);            
+- 转换圆点      transform-origin: right bottom;     
+- 多重转换，顺序不能变。    transform: translate(600px) rotate(360deg); 
+- 缩放          transform: scale(*);                
+- 渐变          background-image: linear-gradient（red，green）   
+- 透明          transparent
+- 透明度        opacity: 0~1;

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 500px;
+            margin: 100px auto;
+            border: 1px solid #000;
+        }
+
+        .son {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            transition: all 2s;
+        }
+
+        /* 鼠标移动到父盒子，son改变位置 */
+        .father:hover .son {
+            /* transform: translate(-50px,100px); */
+            transform: translate(-50%,100%);
+            /* 转换        平移 */
+
+            /* 技巧 */
+             /* 水平方向 */
+            transform: translate(50px);
+
+            /* X轴移动 */
+            transform: translateX(200px);
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

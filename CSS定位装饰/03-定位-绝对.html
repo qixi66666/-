@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /* 绝对定位：
+                    先找已经定位的父级，如果有这样的父级就以这个父级为参照物进行定位
+                    有父级，但父级没有定位，以浏览器窗口为参照物进行定位 */
+            position: absolute;
+            left: 50px;
+
+
+            /* 
+            1、脱标，不占位置 
+            2、改变标签的显示模式特点：具备行内块的特点（在一行共存且宽高生效）*/
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <div class="box">box</div>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+    <p>测试定位测试定位测试定位测试定位测试定位测试定位测试定位</p>
+</body>
+
+</html>
