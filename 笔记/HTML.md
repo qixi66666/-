@@ -29,6 +29,7 @@
 
 背景：
 
+
 - 背景色：background-color:pink
 - 背景图：background-image: url（./）
 - 背景平铺：background-repeat
@@ -80,3 +81,12 @@
 - 渐变          background-image: linear-gradient（red，green）   
 - 透明          transparent
 - 透明度        opacity: 0~1;
+
+# 空间
+
+- 3D位移       transform: translate3d(50px, 100px, 200px);
+- 透视         perspective: 800px~1200px;    (近大远小，给父级加此属性）
+
+# 动画
+- 使用动画     animation: 动画名称 动画花费时长;
+- 定义动画     @keyframes {from   to}   @keyframes {0%   20%   60%}
