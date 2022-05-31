@@ -1,69 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-      }
-      li {
-        list-style: none;
-      }
 
-      img {
-        width: 200px;
-      }
-      
-      .box {
-        width: 600px;
-        height: 112px;
-        border: 5px solid #000;
-        margin: 100px auto;
-        overflow: hidden;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
 
-      .box ul {
-        width: 2000px;
-        animation: move 5s infinite linear;
-      }
+    li {
+      list-style: none;
+    }
 
-      .box li {
-        float: left;
-      }
+    img {
+      width: 200px;
+    }
 
-      /* 定义动画:位移, ul 左侧使用  x -1400  */
-      @keyframes move {
-        to {
-          transform: translateX(-1400px);
-        }
-      }
+    .box {
+      width: 600px;
+      height: 112px;
+      border: 5px solid #000;
+      margin: 100px auto;
+      overflow: hidden;
 
-      /* 用户鼠标移入box,动画暂停 */
-      .box:hover ul {
-        animation-play-state: paused;
-      }
-      
-    </style>
-  </head>
-  <body>
-    <div class="box">
-      <ul>
-        <li><img src="./images/1.jpg" alt="" /></li>
-        <li><img src="./images/2.jpg" alt="" /></li>
-        <li><img src="./images/3.jpg" alt="" /></li>
-        <li><img src="./images/4.jpg" alt="" /></li>
-        <li><img src="./images/5.jpg" alt="" /></li>
-        <li><img src="./images/6.jpg" alt="" /></li>
-        <li><img src="./images/7.jpg" alt="" /></li>
+    }
 
-        <!-- 第567移动的时候,显示区域不能留白 -->
-        <li><img src="./images/1.jpg" alt="" /></li>
-        <li><img src="./images/2.jpg" alt="" /></li>
-        <li><img src="./images/3.jpg" alt="" /></li>
-      </ul>
-    </div>
-  </body>
+    @keyframes move {
+      to {
+        transform: translateX(-1400px);
+      }
+    }
+
+    .box li {
+      float: left;
+    }
+
+    .box ul {
+      width: 2000px;
+      animation: move 7s infinite linear;
+    }
+
+    .box:hover ul {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <ul>
+      <li><img src="./images/1.jpg" alt="" /></li>
+      <li><img src="./images/2.jpg" alt="" /></li>
+      <li><img src="./images/3.jpg" alt="" /></li>
+      <li><img src="./images/4.jpg" alt="" /></li>
+      <li><img src="./images/5.jpg" alt="" /></li>
+      <li><img src="./images/6.jpg" alt="" /></li>
+      <li><img src="./images/7.jpg" alt="" /></li>
+
+      <!-- ,无缝动画动画不留白，盒子显示的图片数量复制一遍 -->
+      <li><img src="./images/1.jpg" alt="" /></li>
+      <li><img src="./images/2.jpg" alt="" /></li>
+      <li><img src="./images/3.jpg" alt="" /></li>
+    </ul>
+  </div>
+</body>
+
 </html>

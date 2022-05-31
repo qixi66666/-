@@ -90,3 +90,7 @@
 # 动画
 - 使用动画     animation: 动画名称 动画花费时长;
 - 定义动画     @keyframes {from   to}   @keyframes {0%   20%   60%}
+
+# Git
+- 暂存                git add
+- 提交暂存到本地仓库   git commit
