@@ -29,7 +29,6 @@
 
 背景：
 
-
 - 背景色：background-color:pink
 - 背景图：background-image: url（./）
 - 背景平铺：background-repeat
@@ -59,10 +58,10 @@
 # 定位
 
 - 定位         position
-- 相对定位     position:relative; 
-- 绝对定位     position:absolute; 
-- 固定定位     position:fixed;    
-- 显示层级     z-index: *;        
+- 相对定位     position:relative;
+- 绝对定位     position:absolute;
+- 固定定位     position:fixed;
+- 显示层级     z-index: *;
 - 垂直方向居中  vertical-algin: middle;  
 
 # 制作网页的三种布局方式
@@ -73,12 +72,12 @@
 
 # 位移
 
-- 位移          transform: translate(*px,*px);      
-- 旋转          transform: rotate(*deg);            
-- 转换圆点      transform-origin: right bottom;     
-- 多重转换，顺序不能变。    transform: translate(600px) rotate(360deg); 
-- 缩放          transform: scale(*);                
-- 渐变          background-image: linear-gradient（red，green）   
+- 位移          transform: translate(*px,*px);
+- 旋转          transform: rotate(*deg);
+- 转换圆点      transform-origin: right bottom;
+- 多重转换，顺序不能变。    transform: translate(600px) rotate(360deg);
+- 缩放          transform: scale(*);
+- 渐变          background-image: linear-gradient（red，green）
 - 透明          transparent
 - 透明度        opacity: 0~1;
 
@@ -88,9 +87,29 @@
 - 透视         perspective: 800px~1200px;    (近大远小，给父级加此属性）
 
 # 动画
+
 - 使用动画     animation: 动画名称 动画花费时长;
 - 定义动画     @keyframes {from   to}   @keyframes {0%   20%   60%}
 
 # Git
-- 暂存                git add
-- 提交暂存到本地仓库   git commit
+
+- 暂存： `git add .`
+
+- 提交暂存到本地仓库：`git commit -m "备注"`
+
+# Flex布局模型
+
+- 给父元素添加 display:flex; 子元素可以自动挤压或者拉伸
+- 组成部分：
+  - 弹性容器
+  - 弹性盒子
+  - 主轴
+  - 侧轴/交叉轴
+
+- 主轴居中：`justify-content: center;`
+- 间距在弹性盒子（子级）之间:`justify-content: space-between;`
+- 所有地方的间距都相等:`justify-content: space-evenly;`
+- 间距在弹性盒子的两侧:`justify-content: space-around;`
+
+- 侧轴居中：`align-items: center;`
+- 侧轴拉伸（默认值）：`align-items: stretch;`

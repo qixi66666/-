@@ -15,20 +15,21 @@
         .box {
             display: flex;
 
-            /* 居中 */
+            /* 侧轴居中 */
             /* align-items: center; */
 
-            /* 拉伸,默认值(现有状态,测试的时候去掉子级的高度) */
+            /* 拉伸，默认值（现有状态，测试的时候去掉子级的高度） */
             /* align-items: stretch; */
+
 
             height: 300px;
             margin: auto;
-            border: 1px solid #000;
+            border: 1px solid #000
         }
-        
+
         .box div {
-            /* width: 100px; */
-            /* height: 100px; */
+            width: 100px;
+            height: 100px;
             background-color: pink;
         }
 
@@ -36,13 +37,12 @@
         .box div:nth-child(2) {
             align-self: center;
         }
-        
     </style>
 </head>
 
 <body>
     <div class="box">
-        <div>1111</div>
+        <div>1</div>
         <div>2</div>
         <div>3</div>
     </div>
