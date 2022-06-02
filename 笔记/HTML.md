@@ -113,3 +113,7 @@
 
 - 侧轴居中：`align-items: center;`
 - 侧轴拉伸（默认值）：`align-items: stretch;`
+
+- 改变主轴方向（垂直）：`flex-direction:column`
+- 弹性盒子换行显示：`flex-wrap: wrap;`
+- 调节行对齐方式：`align-content:###;`

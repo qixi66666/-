@@ -1,0 +1,140 @@
+.xtx_body {
+    padding: 30px 0 85px;
+    background-color: #f6f6f6;
+    ;
+}
+
+.xtx_body .wrapper {
+    display: flex;
+}
+
+/* 左边侧边栏 */
+.xtx_body .aside {
+    width: 227px;
+    min-height: 500px;
+    margin-right: 18px;
+    background-color: #fff;
+}
+
+.xtx_body .aside .one {
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.aside .one div {
+    margin: 44px 72px 3px 56px;
+    width: 99px;
+    height: 99px;
+}
+
+.aside .one div img {
+    height: 85px;
+}
+
+.aside .one p {
+    font-size: 18px;
+    color: #333333;
+    margin-left: 68px;
+    margin-bottom: 12px;
+}
+
+.aside .one span {
+    text-align: center;
+    margin: 0 0 34px 50px;
+    display: inline-block;
+    width: 93px;
+    height: 26px;
+    border-radius: 13px;
+    background-color: #e05e2f;
+    line-height: 26px;
+}
+
+.aside .one span img {
+    margin-right: 4px;
+    width: 15px;
+    height: 15px;
+}
+
+.aside .two {
+    padding: 34px 90px 32px 52px;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.aside .two {
+    font-size: 18px;
+    color: #333333;
+}
+
+.aside .two li {
+    font-size: 14px;
+    color: #666666;
+    margin-top: 32px;
+    line-height: 18px;
+}
+
+.aside .two li:hover a {
+    color: #5cb99e;
+}
+
+.aside .three {
+    padding: 25px 95px 22px 53px;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.aside .three h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.aside .three li a {
+    margin-top: 18px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.aside .four {
+    padding: 25px 100px 25px 53px;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.aside .four h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.aside .four li a {
+    margin-top: 18px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.aside .five {
+    padding: 25px 100px 25px 53px;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.aside .five h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.aside .five li a {
+    margin-top: 18px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+.xtx_body .main {
+    /* width: ; */
+    flex: 1;
+    min-height: 500px;
+    background-color: skyblue;
+}
