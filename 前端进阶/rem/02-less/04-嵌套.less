@@ -1,0 +1,21 @@
+.father {
+    width: 100px;
+
+    .son {
+        color: pink;
+        width: 100px;
+        height: 100px;
+
+
+        // &表示当前选择器
+        &:hover {
+            color: green;
+        }
+    }
+
+    &:hover {
+        color: orange;
+    }
+
+
+}

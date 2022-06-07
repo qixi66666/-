@@ -117,3 +117,10 @@
 - 改变主轴方向（垂直）：`flex-direction:column`
 - 弹性盒子换行显示：`flex-wrap: wrap;`
 - 调节行对齐方式：`align-content:###;`
+
+# less
+
+- less是CSS的预处理器，扩充了CSS语言，使CSS具备一定的逻辑性和计算能力
+- 导入：`@import './less';`
+- 导出：`out: ./文件名/`
+- 禁止导出：`out: false`
