@@ -1,26 +1,26 @@
 // banner
 .carousel {
-    // 如果视口<768, 图250 max-width
-    // 如果视口<992, 图400 max-width
-    // 如果视口>992, 图500 min-width
+    // 视口<768，图250
+    // 视口<992，图400
+    // 视口>992，图500
 
     img {
-        height: 100%!important;
+        height: 100% !important;
     }
 
-    @media (max-width: 992px) {
+    @media (max-width:992px) {
         .item {
             height: 400px;
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width:768px) {
         .item {
             height: 250px;
         }
     }
 
-    @media (min-width: 992px) {
+    @media (min-width:992px) {
         .item {
             height: 500px;
         }
@@ -31,6 +31,10 @@
 .navbar-default {
     background-color: transparent;
     border: 0;
+
+    .nav li a {
+        color: #fff;
+    }
 }
 
 // 开源项目
@@ -41,6 +45,7 @@
     .container {
         div {
             // background-color: pink;
+
             a {
                 display: block;
                 height: 200px;

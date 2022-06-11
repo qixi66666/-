@@ -1,5 +1,5 @@
 .carousel img {
-  height: 100%!important;
+  height: 100% !important;
 }
 @media (max-width: 992px) {
   .carousel .item {
@@ -19,6 +19,9 @@
 .navbar-default {
   background-color: transparent;
   border: 0;
+}
+.navbar-default .nav li a {
+  color: #fff;
 }
 .project {
   padding-top: 30px;
