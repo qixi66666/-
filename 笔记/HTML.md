@@ -138,3 +138,13 @@
 - Dom-文档对象模型
 - BOM-浏览器对象模型
 - 骆驼命名法:首字母小写,后面单词的首字母需要大写:myFirstName
+
+- 判断非数字:`console.log(isNaN(12)); // false`
+- 检测获取字符串的长度:`console.log(var.length);`
+- 数字型转为字符串型：`console.log(num + '');`
+
+- parseInt(变量)  
+字符型的转换为数字型--整数:`console.log(parseInt('3.14')); // 3 取整`
+
+- parseFloat(变量)
+字符型的转换为数字型--小数:`console.log(parseFloat('3.14')); // 3.14`
