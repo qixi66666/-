@@ -7,16 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var num1 = prompt('请输入数字1')
-        var num2 = prompt('请输入数字2')
-        if (num1 > num2) {
-            alert(num1);
-        } else if (num1 < num2) {
-            alert(num2);
-        } else {
-            alert(num1);
+        var username = prompt('请输入用户名')
+        var password = prompt('请输入密码')
+        while (username != 'admin' || password != '123456') {
+            username = prompt('请输入用户名')
+            password = prompt('请输入密码')
         }
-
+        alert('登录成功');
     </script>
 </head>
 

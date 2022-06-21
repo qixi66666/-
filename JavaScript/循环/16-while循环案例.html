@@ -12,23 +12,23 @@
         var i = 1;
         while (i <= 100) {
             console.log('这个人今年' + i + '岁了');
-            i++;
+            i++
         }
         // 2. 计算 1 ~ 100 之间所有整数的和
         var sum = 0;
-        var j = 1;
-        while (j <= 100) {
-            sum += j;
-            j++
+        var i = 1;
+        while (i <= 100) {
+            sum = sum + Number(i);
+            i++;
         }
         console.log(sum);
 
         // 3. 弹出一个提示框， 你爱我吗？  如果输入我爱你，就提示结束，否则，一直询问。
-        var message = prompt('你爱我吗?');
-        while (message !== '我爱你') {
-            message = prompt('你爱我吗?');
+        var massage = prompt('你爱我么？')
+        while (massage !== '我爱你') {
+            massage = prompt('你爱我么？')
         }
-        alert('我也爱你啊！');
+        alert('你爱我呀，我爱你，蜜雪冰城甜蜜蜜')
     </script>
 </head>
 

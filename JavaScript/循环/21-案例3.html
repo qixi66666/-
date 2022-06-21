@@ -7,16 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var num1 = prompt('请输入数字1')
-        var num2 = prompt('请输入数字2')
-        if (num1 > num2) {
-            alert(num1);
-        } else if (num1 < num2) {
-            alert(num2);
-        } else {
-            alert(num1);
+        var num = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 7 != 0) {
+                continue;
+            }
+            num += i;
         }
-
+        console.log('100以内7的倍数的总和是' + num);
     </script>
 </head>
 
