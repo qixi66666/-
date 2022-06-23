@@ -14,6 +14,7 @@
             alert('我是不会被执行的哦！')
         }
         console.log(getSum(1, 2));
+
         // 2. return 只能返回一个值
         function fn(num1, num2) {
             return num1, num2; // 返回的结果是最后一个值
@@ -26,6 +27,7 @@
         }
         var re = getResult(1, 2); // 返回的是一个数组
         console.log(re);
+
         // 4. 我们的函数如果有return 则返回的是 return 后面的值，如果函数么有 return 则返回undefined
         function fun1() {
             return 666;
