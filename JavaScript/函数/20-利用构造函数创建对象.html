@@ -19,20 +19,21 @@
             this.name = uname;
             this.age = age;
             this.sex = sex;
-            this.sing = function(sang) {
+            this.sing = function (sang) {
                 console.log(sang);
-
             }
         }
+
         var ldh = new Star('刘德华', 18, '男'); // 调用函数返回的是一个对象
         // console.log(typeof ldh);
         console.log(ldh.name);
         console.log(ldh['sex']);
         ldh.sing('冰雨');
+
         var zxy = new Star('张学友', 19, '男');
         console.log(zxy.name);
-        console.log(zxy.age);
-        zxy.sing('李香兰')
+        console.log(zxy['sex']);
+        zxy.sing('李香兰');
 
 
 

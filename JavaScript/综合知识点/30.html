@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**
+ * @param {string} s
+ * @return {number}
+ */
+        var romanToInt = function (s) {
+            var aArr = new Array(s);
+            function getNum(aArr) {
+                for (var i = 0; i <= aArr.length; i++) {
+                    switch (aArr[i]) {
+                        case 'I':
+                            sArr[i] = 1;
+                            break;
+                        case 'V':
+                            sArr[i] = 5;
+                            break;
+                        case 'X':
+                            sArr[i] = 10;
+                            break;
+                        case 'L':
+                            sArr[i] = 50;
+                            break;
+                        case 'C':
+                            sArr[i] = 100;
+                            break;
+                        case 'D':
+                            sArr[i] = 500;
+                            break;
+                        case 'M':
+                            sArr[i] = 1000;
+                            break;
+                    }
+                }
+            }
+            return aArr
+        }
+        getNum(aArr);
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
