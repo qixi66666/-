@@ -148,3 +148,19 @@
 
 - parseFloat(变量)
 字符型的转换为数字型--小数:`console.log(parseFloat('3.14')); // 3.14`
+
+# DOM & BOM
+
+- 操作元素内容：
+- innerText 改变元素内容
+- innerHTML 改变元素内容,可识别html，常用!!!
+
+- 操作表单元素属性：
+- type、value、disabled
+
+- 操作元素样式属性：
+- element.style
+- className
+
+- 事件类型
+- onclick   鼠标点击
