@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var sum = 0;
+        var difference = 0;
+        accumulate = 0;
+        quotient = 0;
+        var pro = prompt('欢迎使用简易计算器:\n 1.加法运算:\n 2.减法运算:\n 3.乘法运算:\n 4:除法运算:\n 5.退出:\n 请输入您的选项:');
+        switch (pro) {
+            case '1':
+                for (var i = 1; i < 3; i++) {
+                    num = prompt('请输入第' + i + '个数字');
+                    sum = sum + parseInt(num);
+                }
+                alert('得到的结果是' + sum);
+                break;
+            case '2':
+                var num2 = prompt('请输入第1个数字');
+                var num3 = prompt('请输入第2个数字');
+                if (num2 > num3) {
+                    num2 - num3;
+                    difference = num2 - num3;
+                } else {
+                    num3 - num2;
+                    difference = num3 - num2;
+                }
+                alert('得到的结果是' + difference);
+                break;
+            case '3':
+                var num2 = prompt('请输入第1个数字');
+                var num3 = prompt('请输入第2个数字');
+                accumulate = num2 * num3;
+                alert(accumulate);
+                break;
+            case '4':
+                var num2 = prompt('请输入第1个数字');
+                var num3 = prompt('请输入第2个数字');
+                quotient = num2 / num3;
+                alert(quotient);
+                break;
+            case '5':
+                break;
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
