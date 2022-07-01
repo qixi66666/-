@@ -156,11 +156,27 @@
 - innerHTML 改变元素内容,可识别html，常用!!!
 
 - 操作表单元素属性：
-- type、value、disabled
+- `type、value、disabled`
 
 - 操作元素样式属性：
-- element.style
-- className
+- `element.style`
+- `className`
 
 - 事件类型
-- onclick   鼠标点击
+- `onclick`   鼠标点击
+
+- 获取元素的属性值：
+- `element.getAttribute('属性')`
+
+- 得到元素的父节点：
+- `element.parentNode`
+
+- 得到元素的子节点：
+- `element.children`
+
+- 获取第一个和最后一个子元素节点
+- `element.firstElementChild`
+- `element.lastElementChild`
+
+- `element.children[0]`
+- `element.children.length-1`

@@ -13,10 +13,12 @@
     <script>
         var div = document.querySelector('div');
         // console.log(div.getTime);
+        // 全部获取
         console.log(div.getAttribute('getTime'));
         div.setAttribute('data-time', 20);
         console.log(div.getAttribute('data-index'));
         console.log(div.getAttribute('data-list-name'));
+
         // h5新增的获取自定义属性的方法 它只能获取data-开头的
         // dataset 是一个集合里面存放了所有以data开头的自定义属性
         console.log(div.dataset);
