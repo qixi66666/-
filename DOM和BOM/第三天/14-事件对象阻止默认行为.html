@@ -31,11 +31,11 @@
         }
         // 2. 阻止默认行为（事件） 让链接不跳转 或者让提交按钮不提交
         var a = document.querySelector('a');
-        a.addEventListener('click', function(e) {
-                e.preventDefault(); //  dom 标准写法
-            })
-            // 3. 传统的注册方式
-        a.onclick = function(e) {
+        a.addEventListener('click', function (e) {
+            e.preventDefault(); //  dom 标准写法
+        })
+        // 3. 传统的注册方式
+        a.onclick = function (e) {
             // 普通浏览器 e.preventDefault();  方法
             // e.preventDefault();
             // 低版本浏览器 ie678  returnValue  属性

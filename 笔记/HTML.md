@@ -151,6 +151,9 @@
 
 # DOM & BOM
 
+- DOM
+- 文档对象模型，是W3C组织推荐的处理可扩展表舅语言的标准编程接口。
+
 - 操作元素内容：
 - innerText 改变元素内容
 - innerHTML 改变元素内容,可识别html，常用!!!
@@ -163,20 +166,46 @@
 - `className`
 
 - 事件类型
-- `onclick`   鼠标点击
+  - `onclick`     鼠标点击
+  - `onmouseout`  鼠标经过触发
+  - `onmouseout`  鼠标离开触发
+  - `onfocus`     获得鼠标焦点触发
+  - `onblur`      失去鼠标焦点触发
+  - `onmousemove` 鼠标移动触发
+  - `onmouseup`   鼠标弹起触发
+  - `onmousedown` 鼠标按下触发
 
-- 获取元素的属性值：
-- `element.getAttribute('属性')`
+- 元素的属性值：
+  - `getAttribute`  得到元素属性
+  - `setAttribute`  设置元素属性
+  - `removeAttribute`  移除属性
 
 - 得到元素的父节点：
-- `element.parentNode`
-
+  - `element.parentNode`
 - 得到元素的子节点：
-- `element.children`
+  - `element.children`
 
 - 获取第一个和最后一个子元素节点
-- `element.firstElementChild`
-- `element.lastElementChild`
+  - `element.firstElementChild`
+  - `element.lastElementChild`
+  - `element.children[0]`
+  - `element.children.length-1`
 
-- `element.children[0]`
-- `element.children.length-1`
+- 创建元素
+  - `innerHTML`
+  - `creatElement`
+
+- 增加元素
+  - `appendChild`  在后面添加
+  - `insertBefore` 在前面添加
+
+- 删除元素
+  - `removeChild`
+
+# 事件委托
+
+- 事件委托的原理：不是每个子节点单独设置事件监听器，而是事件监听器设置在其父节点上，然后利用冒泡原理影响设置每个子节点。
+
+# BOM
+
+- 浏览器对象模型
