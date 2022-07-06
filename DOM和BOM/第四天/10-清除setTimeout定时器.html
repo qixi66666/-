@@ -12,12 +12,12 @@
     <button>点击停止定时器</button>
     <script>
         var btn = document.querySelector('button');
-        var timer = setTimeout(function() {
+        var timer = setTimeout(function () {
             console.log('爆炸了');
-
         }, 5000);
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
             clearTimeout(timer);
+            //清楚定时器
         })
     </script>
 </body>

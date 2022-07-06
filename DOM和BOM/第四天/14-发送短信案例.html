@@ -18,14 +18,15 @@
         // 如果变量为0 说明到了时间，我们需要停止定时器，并且复原按钮初始状态
         var btn = document.querySelector('button');
         var time = 3; // 定义剩下的秒数
-        btn.addEventListener('click', function() {
-            btn.disabled = true;
-            var timer = setInterval(function() {
+        btn.addEventListener('click', function () {
+            btn.disabled = true; //按钮禁用
+            var timer = setInterval(function () {
                 if (time == 0) {
                     // 清除定时器和复原按钮
                     clearInterval(timer);
                     btn.disabled = false;
                     btn.innerHTML = '发送';
+                    time = 3; //重新从3秒开始
                 } else {
                     btn.innerHTML = '还剩下' + time + '秒';
                     time--;

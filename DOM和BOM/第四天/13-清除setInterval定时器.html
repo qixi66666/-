@@ -15,13 +15,13 @@
         var begin = document.querySelector('.begin');
         var stop = document.querySelector('.stop');
         var timer = null; // 全局变量  null是一个空对象
-        begin.addEventListener('click', function() {
-            timer = setInterval(function() {
+        begin.addEventListener('click', function () {
+            timer = setInterval(function () {
                 console.log('ni hao ma');
 
             }, 1000);
         })
-        stop.addEventListener('click', function() {
+        stop.addEventListener('click', function () {
             clearInterval(timer);
         })
     </script>

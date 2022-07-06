@@ -35,13 +35,14 @@
         // 3. 第三个问题
 
         console.log(1);
-        document.onclick = function() {
+        document.onclick = function () {
             console.log('click');
         }
         console.log(2);
-        setTimeout(function() {
+        setTimeout(function () {
             console.log(3)
         }, 3000)
+        //先执行同步任务，在执行异步任务。回调函数属于异步任务。
     </script>
 </body>
 
