@@ -212,9 +212,19 @@
 
 # location对象
 
-- location.href      !!!获取或者设置整个URL
-- location.host      返回主机（域名）    www.itheima.com
-- location.port      返回端口号  如果未写返回空字符串
-- location.pathname  返回路径
-- location.srarch    !!!返回参数
-- location.hash      返回片段  #后面内容  常见于链接 锚点
+- `location.href`     !!!获取或者设置整个URL
+- `location.host`      返回主机（域名）    www.itheima.com
+- `location.port`      返回端口号  如果未写返回空字符串
+- `location.pathname`  返回路径
+- `location.srarch`    !!!返回参数
+- `location.hash`      返回片段  #后面内容  常见于链接 锚点
+
+# 元素获取滚动距离
+
+- `scrollTop`
+- `scrollLeft`
+
+# 页面中被卷去的头部
+
+- `window.pageXOffset`
+- `window.pageYOffset`

@@ -27,13 +27,13 @@
         // 4. 加一个结束定时器的条件
         // 5. 注意此元素需要添加定位， 才能使用element.style.left
         var div = document.querySelector('div');
-        var timer = setInterval(function() {
+        var timer = setInterval(function () {
             if (div.offsetLeft >= 400) {
-                // 停止动画 本质是停止定时器
+                // 停止动画，本质是停止定时器
                 clearInterval(timer);
             }
-            div.style.left = div.offsetLeft + 1 + 'px';
-        }, 30);
+            div.style.left = div.offsetLeft + 5 + 'px';
+        }, 30)
     </script>
 </body>
 

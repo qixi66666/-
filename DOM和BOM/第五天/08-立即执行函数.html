@@ -13,12 +13,11 @@
         // 1.立即执行函数: 不需要调用，立马能够自己执行的函数
         function fn() {
             console.log(1);
-
         }
         fn();
         // 2. 写法 也可以传递参数进来
         // 1.(function() {})()    或者  2. (function(){}());
-        (function(a, b) {
+        (function (a, b) {
             console.log(a + b);
             var num = 10;
         })(1, 2); // 第二个小括号可以看做是调用函数
