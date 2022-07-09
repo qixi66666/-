@@ -22,7 +22,7 @@
         // 1. 获取元素
         // 2. 手指触摸DOM元素事件
         var div = document.querySelector('div');
-        div.addEventListener('touchstart', function(e) {
+        div.addEventListener('touchstart', function (e) {
             // console.log(e);
             // touches 正在触摸屏幕的所有手指的列表 
             // targetTouches 正在触摸当前DOM元素的手指列表
@@ -35,12 +35,12 @@
 
         });
         // 3. 手指在DOM元素身上移动事件
-        div.addEventListener('touchmove', function() {
+        div.addEventListener('touchmove', function () {
 
 
         });
         // 4. 手指离开DOM元素事件
-        div.addEventListener('touchend', function(e) {
+        div.addEventListener('touchend', function (e) {
             // console.log(e);
             // 当我们手指离开屏幕的时候，就没有了 touches 和 targetTouches 列表
             // 但是会有 changedTouches

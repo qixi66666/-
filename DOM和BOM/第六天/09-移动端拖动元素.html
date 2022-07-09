@@ -28,7 +28,7 @@
         var startY = 0;
         var x = 0; //获得盒子原来的位置
         var y = 0;
-        div.addEventListener('touchstart', function(e) {
+        div.addEventListener('touchstart', function (e) {
             //  获取手指初始坐标
             startX = e.targetTouches[0].pageX;
             startY = e.targetTouches[0].pageY;
@@ -36,7 +36,7 @@
             y = this.offsetTop;
         });
 
-        div.addEventListener('touchmove', function(e) {
+        div.addEventListener('touchmove', function (e) {
             //  计算手指的移动距离： 手指移动之后的坐标减去手指初始的坐标
             var moveX = e.targetTouches[0].pageX - startX;
             var moveY = e.targetTouches[0].pageY - startY;
