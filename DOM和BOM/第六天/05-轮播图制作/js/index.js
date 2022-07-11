@@ -74,7 +74,7 @@ window.addEventListener('load', function () {
             }
             num++;
             animate(ul, -num * focusWidth, function () {
-                flag = true; // 打开节流阀
+                flag = true; // 打开节流阀，动画执行完毕之后
             });
             // 8. 点击右侧按钮，小圆圈跟随一起变化 可以再声明一个变量控制小圆圈的播放
             circle++;

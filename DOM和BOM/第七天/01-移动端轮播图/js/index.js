@@ -112,6 +112,6 @@ window.addEventListener('load', function () {
         }
     });
     goBack.addEventListener('click', function () {
-        window.scroll(0.0);
+        window.scroll(0, 0);
     })
 })
