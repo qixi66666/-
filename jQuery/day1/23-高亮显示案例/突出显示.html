@@ -9,15 +9,15 @@
             margin: 0;
             padding: 0;
         }
-        
+
         ul {
             list-style: none;
         }
-        
+
         body {
             background: #000;
         }
-        
+
         .wrap {
             margin: 100px auto 0;
             width: 630px;
@@ -27,12 +27,12 @@
             overflow: hidden;
             border: 1px solid #fff;
         }
-        
+
         .wrap li {
             float: left;
             margin: 0 10px 10px 0;
         }
-        
+
         .wrap img {
             display: block;
             border: 0;
@@ -40,15 +40,14 @@
     </style>
     <script src="jquery.min.js"></script>
     <script>
-        $(function() {
+        $(function () {
             //鼠标进入的时候,其他的li标签透明度：0.5
-            $(".wrap li").hover(function() {
+            $('.wrap li').hover(function () {
                 $(this).siblings().stop().fadeTo(400, 0.5);
-            }, function() {
+            }, function () {
                 // 鼠标离开，其他li 透明度改为 1
                 $(this).siblings().stop().fadeTo(400, 1);
             })
-
         });
     </script>
 </head>

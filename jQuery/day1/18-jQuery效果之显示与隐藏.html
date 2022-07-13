@@ -22,21 +22,22 @@
     <button>切换</button>
     <div></div>
     <script>
-        $(function() {
-            $("button").eq(0).click(function() {
-                $("div").show(1000, function() {
+        $(function () {
+            $("button").eq(0).click(function () {
+                $("div").show(1000, function () {
                     alert(1);
                 });
             })
-            $("button").eq(1).click(function() {
-                $("div").hide(1000, function() {
+            $("button").eq(1).click(function () {
+                $("div").hide(1000, function () {
                     alert(1);
                 });
             })
-            $("button").eq(2).click(function() {
-                    $("div").toggle(1000);
-                })
-                // 一般情况下，我们都不加参数直接显示隐藏就可以了
+            $("button").eq(2).click(function () {
+                $("div").toggle(1000);
+                // 切换
+            })
+            // 一般情况下，我们都不加参数直接显示隐藏就可以了
         });
     </script>
 </body>

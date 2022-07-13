@@ -14,7 +14,7 @@
             margin: 100px auto;
             transition: all 0.5s;
         }
-        
+
         .current {
             background-color: red;
             transform: rotate(360deg);
@@ -26,7 +26,7 @@
 <body>
     <div class="current"></div>
     <script>
-        $(function() {
+        $(function () {
             // 1. 添加类 addClass()
             // $("div").click(function() {
             //     // $(this).addClass("current");
@@ -36,7 +36,7 @@
             //     $(this).removeClass("current");
             // });
             // 3. 切换类 toggleClass()
-            $("div").click(function() {
+            $("div").click(function () {
                 $(this).toggleClass("current");
             });
         })

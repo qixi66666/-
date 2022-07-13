@@ -11,22 +11,22 @@
             margin: 0;
             padding: 0;
         }
-        
+
         li {
             list-style-type: none;
         }
-        
+
         .tab {
             width: 978px;
             margin: 100px auto;
         }
-        
+
         .tab_list {
             height: 39px;
             border: 1px solid #ccc;
             background-color: #f1f1f1;
         }
-        
+
         .tab_list li {
             float: left;
             height: 39px;
@@ -35,16 +35,16 @@
             text-align: center;
             cursor: pointer;
         }
-        
+
         .tab_list .current {
             background-color: #c81623;
             color: #fff;
         }
-        
+
         .item_info {
             padding: 20px 0 0 20px;
         }
-        
+
         .item {
             display: none;
         }
@@ -83,9 +83,9 @@
         </div>
     </div>
     <script>
-        $(function() {
+        $(function () {
             // 1.点击上部的li，当前li 添加current类，其余兄弟移除类
-            $(".tab_list li").click(function() {
+            $(".tab_list li").click(function () {
                 // 链式编程操作
                 $(this).addClass("current").siblings().removeClass("current");
                 // 2.点击的同时，得到当前li 的索引号

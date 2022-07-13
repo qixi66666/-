@@ -10,15 +10,15 @@
             margin: 0;
             padding: 0;
         }
-        
+
         img {
             display: block;
         }
-        
+
         ul {
             list-style: none;
         }
-        
+
         .king {
             width: 852px;
             margin: 100px auto;
@@ -26,11 +26,11 @@
             overflow: hidden;
             padding: 10px;
         }
-        
+
         .king ul {
             overflow: hidden;
         }
-        
+
         .king li {
             position: relative;
             float: left;
@@ -38,24 +38,24 @@
             height: 69px;
             margin-right: 10px;
         }
-        
+
         .king li.current {
             width: 224px;
         }
-        
+
         .king li.current .big {
             display: block;
         }
-        
+
         .king li.current .small {
             display: none;
         }
-        
+
         .big {
             width: 224px;
             display: none;
         }
-        
+
         .small {
             position: absolute;
             top: 0;
@@ -71,9 +71,9 @@
 <body>
     <script src="js/jquery.min.js"></script>
     <script type="text/javascript">
-        $(function() {
+        $(function () {
             // 鼠标经过某个小li 有两步操作：
-            $(".king li").mouseenter(function() {
+            $(".king li").mouseenter(function () {
                 // 1.当前小li 宽度变为 224px， 同时里面的小图片淡出，大图片淡入
                 $(this).stop().animate({
                     width: 224
@@ -83,9 +83,6 @@
                     width: 69
                 }).find(".small").stop().fadeIn().siblings(".big").stop().fadeOut();
             })
-
-
-
         });
     </script>
     <div class="king">
