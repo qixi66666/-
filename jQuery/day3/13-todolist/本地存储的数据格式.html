@@ -24,6 +24,8 @@
         var data = localStorage.getItem("todo");
         // console.log(typeof data);
         // console.log(data[0].title);   // 字符串没有title属性
+
+
         // 2. 获取本地存储的数据 我们需要把里面的字符串数据转换为 对象格式 JSON.parse()
         data = JSON.parse(data);
         console.log(data);
