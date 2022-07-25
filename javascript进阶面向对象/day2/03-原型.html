@@ -10,16 +10,16 @@
 
 <body>
     <script>
-        // 1. 构造函数的问题. 
+        // 1. 构造函数的问题.    复杂数据类型单独开辟内存空间，浪费内存
         function Star(uname, age) {
             this.uname = uname;
             this.age = age;
             // this.sing = function() {
             //     console.log('我会唱歌');
-
             // }
         }
-        Star.prototype.sing = function() {
+        Star.prototype.sing = function () {
+            // 原型对象  是每一个构造函数里面都会存在的一个对象
             console.log('我会唱歌');
         }
         var ldh = new Star('刘德华', 18);
@@ -28,7 +28,7 @@
         // console.dir(Star);
         ldh.sing();
         zxy.sing();
-        // 2. 一般情况下,我们的公共属性定义到构造函数里面, 公共的方法我们放到原型对象身上
+        // 2. 一般情况下,我们的公共属性定义到构造函数里面, 公共的方法我们放到原型对象身上   共享方法节约内存资源
     </script>
 </body>
 

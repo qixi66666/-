@@ -14,9 +14,8 @@
         function Star(uname, age) {
             this.uname = uname;
             this.age = age;
-            this.sing = function() {
+            this.sing = function () {
                 console.log('我会唱歌');
-
             }
         }
         var ldh = new Star('刘德华', 18);
@@ -25,6 +24,8 @@
         console.log(ldh.uname);
         ldh.sing();
         // console.log(Star.uname); // 不可以通过构造函数来访问实例成员
+
+
         // 2. 静态成员 在构造函数本身上添加的成员  sex 就是静态成员
         Star.sex = '男';
         // 静态成员只能通过构造函数来访问

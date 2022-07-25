@@ -17,24 +17,30 @@
             this.uname = uname;
             this.age = age;
         }
-        Father.prototype.money = function() {
+        Father.prototype.money = function () {
             console.log(100000);
-
         };
+
+
         // 2 .子构造函数 
         function Son(uname, age, score) {
             // this 指向子构造函数的对象实例
             Father.call(this, uname, age);
             this.score = score;
         }
-        // Son.prototype = Father.prototype;  这样直接赋值会有问题,如果修改了子原型对象,父原型对象也会跟着一起变化
-        Son.prototype = new Father();
-        // 如果利用对象的形式修改了原型对象,别忘了利用constructor 指回原来的构造函数
-        Son.prototype.constructor = Son;
-        // 这个是子构造函数专门的方法
-        Son.prototype.exam = function() {
-            console.log('孩子要考试');
 
+        // Son.prototype = Father.prototype;  这样直接赋值会有问题,如果修改了子原型对象,子原型对象的地址指向父原型对象，等于直接修改了父原型对象里面的值，所以父原型对象也会跟着一起变化
+
+
+        Son.prototype = new Father();
+        // 让son的原型对象指向father的实例对象，father的实例对象指向father的原型对象，这样既实现了方法的继承，又不会使father的原型对象一起发生变化。
+        //如果利用对象的形式修改了原型对象,别忘了利用constructor 指回原来的构造函数
+        Son.prototype.constructor = Son;
+
+
+        // 这个是子构造函数专门的方法
+        Son.prototype.exam = function () {
+            console.log('孩子要考试');
         }
         var son = new Son('刘德华', 18, 100);
         console.log(son);

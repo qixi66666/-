@@ -10,13 +10,12 @@
 
 <body>
     <script>
+        // es6之前没有extends 继承  所以可以通过构造函数+原型对象模拟实现继承，被称为组合继承
         // call 方法
         function fn(x, y) {
             console.log('我想喝手磨咖啡');
             console.log(this);
             console.log(x + y);
-
-
         }
         var o = {
             name: 'andy'

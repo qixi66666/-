@@ -26,7 +26,7 @@
         // (2) 类原型对象prototype 里面有constructor 指向类本身
         console.log(Star.prototype.constructor);
         // (3)类可以通过原型对象添加方法
-        Star.prototype.sing = function() {
+        Star.prototype.sing = function () {
             console.log('冰雨');
 
         }
@@ -34,8 +34,9 @@
         console.dir(ldh);
         // (4) 类创建的实例对象有__proto__ 原型指向 类的原型对象
         console.log(ldh.__proto__ === Star.prototype);
+
         i = i + 1;
-        i++
+        i++    // 语法糖：更便捷，更简单的写法
     </script>
 </body>
 

@@ -14,6 +14,7 @@
             this.uname = uname;
             this.age = age;
         }
+        // 原型里面有constructor 属性   作用是确定对象是通过哪个构造函数创建出来的
         // 很多情况下,我们需要手动的利用constructor 这个属性指回 原来的构造函数
         // Star.prototype.sing = function() {
         //     console.log('我会唱歌');
@@ -24,10 +25,10 @@
         Star.prototype = {
             // 如果我们修改了原来的原型对象,给原型对象赋值的是一个对象,则必须手动的利用constructor指回原来的构造函数
             constructor: Star,
-            sing: function() {
+            sing: function () {
                 console.log('我会唱歌');
             },
-            movie: function() {
+            movie: function () {
                 console.log('我会演电影');
             }
         }
