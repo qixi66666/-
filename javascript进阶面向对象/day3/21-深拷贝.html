@@ -38,14 +38,14 @@
                     // 4. 属于简单数据类型
                     newobj[k] = item;
                 }
-
             }
         }
         deepCopy(o, obj);
         console.log(o);
-
         var arr = [];
         console.log(arr instanceof Object);
+        // 数组也属于对象，所以要把数据的if写在OBJ的上面。
+
         o.msg.age = 20;
         console.log(obj);
     </script>

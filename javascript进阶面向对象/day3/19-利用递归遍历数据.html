@@ -22,7 +22,7 @@
                 }, {
                     id: 112,
                     gname: '美的'
-                }, ]
+                },]
             }, {
                 id: 12,
                 gname: '洗衣机'
@@ -35,17 +35,18 @@
         // 1. 利用 forEach 去遍历里面的每一个对象
         function getID(json, id) {
             var o = {};
-            json.forEach(function(item) {
+            json.forEach(function (item) {
                 // console.log(item); // 2个数组元素
+                // 得到外层数据
                 if (item.id == id) {
                     // console.log(item);
                     o = item;
                     // 2. 我们想要得里层的数据 11 12 可以利用递归函数
                     // 里面应该有goods这个数组并且数组的长度不为 0 
+                    // 得到里层数据
                 } else if (item.goods && item.goods.length > 0) {
                     o = getID(item.goods, id);
                 }
-
             });
             return o;
         }

@@ -19,8 +19,8 @@
         // 闭包应用-3秒钟之后,打印所有li元素的内容
         var lis = document.querySelector('.nav').querySelectorAll('li');
         for (var i = 0; i < lis.length; i++) {
-            (function(i) {
-                setTimeout(function() {
+            (function (i) {
+                setTimeout(function () {
                     console.log(lis[i].innerHTML);
                 }, 3000)
             })(i);

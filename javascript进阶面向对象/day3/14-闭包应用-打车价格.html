@@ -16,12 +16,12 @@
         // 如果有拥堵情况,总价格多收取10块钱拥堵费
         // function fn() {};
         // fn();
-        var car = (function() {
+        var car = (function () {
             var start = 13; // 起步价  局部变量
-            var total = 0; // 总价  局部变量
+            var total = 0;  // 总价  局部变量
             return {
                 // 正常的总价
-                price: function(n) {
+                price: function (n) {
                     if (n <= 3) {
                         total = start;
                     } else {
@@ -30,7 +30,7 @@
                     return total;
                 },
                 // 拥堵之后的费用
-                yd: function(flag) {
+                yd: function (flag) {
                     return flag ? total + 10 : total;
                 }
             }

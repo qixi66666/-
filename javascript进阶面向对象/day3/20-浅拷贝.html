@@ -29,9 +29,9 @@
         // console.log(obj);
 
         console.log('--------------');
-        Object.assign(o, obj);
+        Object.assign(o, obj);   // 语法糖
         console.log(o);
-        o.msg.age = 20;
+        o.msg.age = 20;   //修改拷贝之后的数值,也会影响被拷贝对象的值
         console.log(obj);
     </script>
 </body>
