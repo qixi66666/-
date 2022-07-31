@@ -17,11 +17,13 @@
         console.log(rg.test('abcd'));
         console.log(rg.test('aabcd'));
         console.log('---------------------------');
+
         var reg = /^abc/;
         console.log(reg.test('abc')); // true
         console.log(reg.test('abcd')); // true
         console.log(reg.test('aabcd')); // false
         console.log('---------------------------');
+
         var reg1 = /^abc$/; // 精确匹配 要求必须是 abc字符串才符合规范
         console.log(reg1.test('abc')); // true
         console.log(reg1.test('abcd')); // false

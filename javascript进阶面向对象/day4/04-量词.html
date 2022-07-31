@@ -41,12 +41,14 @@
         // console.log(reg.test('a')); // false
         // console.log(reg.test('aaaa')); // false
         // console.log(reg.test('aaa')); // true
+
         //  {3, }  大于等于3
         var reg = /^a{3,}$/;
         console.log(reg.test('')); // false
         console.log(reg.test('a')); // false
         console.log(reg.test('aaaa')); // true
         console.log(reg.test('aaa')); // true
+
         //  {3,16}  大于等于3 并且 小于等于16
         var reg = /^a{3,6}$/;
         console.log(reg.test('')); // false

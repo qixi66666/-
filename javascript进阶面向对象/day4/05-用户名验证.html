@@ -11,11 +11,11 @@
             color: #aaa;
             font-size: 14px;
         }
-        
+
         .right {
             color: green;
         }
-        
+
         .wrong {
             color: red;
         }
@@ -39,7 +39,7 @@
         // console.log(reg.test('andy!007'));
         var uname = document.querySelector('.uname');
         var span = document.querySelector('span');
-        uname.onblur = function() {
+        uname.onblur = function () {
             if (reg.test(this.value)) {
                 console.log('正确的');
                 span.className = 'right';

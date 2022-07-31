@@ -17,6 +17,7 @@
         console.log(rg.test('baby'));
         console.log(rg.test('color'));
         console.log(rg.test('red'));
+
         var rg1 = /^[abc]$/; // 三选一 只有是a 或者是 b  或者是c 这三个字母才返回 true
         console.log(rg1.test('aa'));
         console.log(rg1.test('a'));
@@ -30,6 +31,7 @@
         console.log(reg.test('z'));
         console.log(reg.test(1));
         console.log(reg.test('A'));
+
         // 字符组合
         var reg1 = /^[a-zA-Z0-9_-]$/; // 26个英文字母(大写和小写都可以)任何一个字母返回 true  
         console.log(reg1.test('a'));
@@ -39,6 +41,7 @@
         console.log(reg1.test('_'));
         console.log(reg1.test('!'));
         console.log('----------------');
+
         // 如果中括号里面有^ 表示取反的意思 千万和 我们边界符 ^ 别混淆
         var reg2 = /^[^a-zA-Z0-9_-]$/;
         console.log(reg2.test('a'));
