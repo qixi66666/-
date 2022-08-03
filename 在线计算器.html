@@ -65,43 +65,72 @@
 <body>
     <div class="counter">
         <div class="box">
-            <input type="text" class="start" value="0">
             <input type="text" class="end" value="0">
+            <input type="text" class="start" value="0">
         </div>
         <ul>
             <li>7</li>
             <li>8</li>
             <li>9</li>
-            <li>÷</li>
+            <li class="operator">÷</li>
             <li>4</li>
             <li>5</li>
             <li>6</li>
-            <li>×</li>
+            <li class="operator">×</li>
             <li>1</li>
             <li>2</li>
             <li>3</li>
-            <li>-</li>
+            <li class="operator">-</li>
             <li>0</li>
             <li>.</li>
-            <li>=</li>
-            <li>+</li>
-            <li>AC</li>
+            <li class="result">=</li>
+            <li class="operator">+</li>
+            <li class="AC">AC</li>
         </ul>
     </div>
     <script>
         var lis = document.querySelectorAll('li');
-        console.log(lis);
         var counter = document.querySelector('.counter');
         var start = document.querySelector('.start');
         var end = document.querySelector('.end');
-        var box = document.querySelector('.box');
-
+        var result = document.querySelector('.result');
+        var AC = document.querySelector('.AC');
+        var operator = document.querySelector('.operator');
+        var text = '';
         for (let i = 0; i < lis.length; i++) {
             lis[i].onclick = function () {
-                console.log(i);
-                start.value = lis[i].innerHTML;
+                text = text + lis[i].innerHTML;
+                start.value = text;
             }
         };
+
+        AC.onclick = function () {
+            start.value = '0';
+            text = '';
+        };
+        result.onclick = function () {
+            end.value = eval(text);
+            text = eval(text);
+            start.value = 0;
+        }
+
+        // 除法
+        // function divide(e, ele) {
+        //     var enddivide = (e / ele);
+        //     end.value = enddivide.value;
+        //     return end;
+        //     console.log(end);
+        // };
+
+        // // 乘法
+        // function multiply(e, ele) {
+        //     var endmultiply = (e * ele);
+        //     end.value = endmultiply.value;
+        //     return end;
+        // }
+
+
+
 
 
 
