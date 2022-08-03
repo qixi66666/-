@@ -117,11 +117,13 @@
         };
         AC.onclick = function () {
             start.value = '0';
+            end.value = '0';
         };
         result.onclick = function () {
-            end.value = eval(start.value);
+            end.value = start.value + '=';
+            start.value = eval(start.value);
             // start.value = eval(start.value);
-            start.value = 0;
+            // end.value = 0;
         }
 
         // 除法
