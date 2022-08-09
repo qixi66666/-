@@ -229,6 +229,14 @@
 - `window.pageXOffset`
 - `window.pageYOffset`
 
-# jQuery
+# 数据类型
+
+# 算法
+
+# 大O表示法
+
+# 二分法
+
+# 栈：它是一种受限的线性表，后进先出
 
 -

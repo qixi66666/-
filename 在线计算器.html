@@ -121,31 +121,30 @@
         };
         result.onclick = function () {
             end.value = start.value + '=';
-            start.value = eval(start.value);
-            // start.value = eval(start.value);
-            // end.value = 0;
+            start.value = myeval(start.value);
         }
 
-        // 除法
-        // function divide(e, ele) {
-        //     var enddivide = (e / ele);
-        //     end.value = enddivide.value;
-        //     return end;
-        //     console.log(end);
-        // };
-
-        // // 乘法
-        // function multiply(e, ele) {
-        //     var endmultiply = (e * ele);
-        //     end.value = endmultiply.value;
-        //     return end;
-        // }
+        function myeval(e) {
+            let arr = [];
+            let num1 = '';
+            let num2 = '';
+            let operator = '';
+            for (let i = 0; i < start.value.length; i++) {
+                if (start.value[i] > 0 && start.value[i] <= 9) {
+                    arr.push(start.value[i]);
+                    console.log(arr);
 
 
-
-
-
-
+                }
+                if (start.value[i] == '+' || start.value[i] == '-' || start.value[i] == '/' || start.value[i] == '*') {
+                    arr.push(start.value[i]);
+                    let operator = start.value[i];
+                    console.log(operator);
+                    // console.log(arr);
+                }
+            }
+        }
+        // 判断数字在0 - 9 之间，追加到数组里面，如果遍历到运算符，就把数组内的数字进行运算
     </script>
 </body>
 
