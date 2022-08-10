@@ -126,21 +126,26 @@
 
         function myeval(e) {
             let arr = [];
-            let num1 = '';
-            let num2 = '';
+            let num1 = 0;
+            let num2 = 0;
             let operator = '';
+            let open = false;
+            // let op = false;
+            // let end = 0;
             for (let i = 0; i < start.value.length; i++) {
+
                 if (start.value[i] > 0 && start.value[i] <= 9) {
                     arr.push(start.value[i]);
                     console.log(arr);
-
-
+                    // op = true;
                 }
                 if (start.value[i] == '+' || start.value[i] == '-' || start.value[i] == '/' || start.value[i] == '*') {
-                    arr.push(start.value[i]);
-                    let operator = start.value[i];
-                    console.log(operator);
-                    // console.log(arr);
+                    operator = start.value[i];
+                    var str = arr.join('');
+                    num1 = Number(str);
+                    // console.log(operator);
+                    console.log(num1);
+                    // open = true;
                 }
             }
         }
