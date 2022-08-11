@@ -129,27 +129,93 @@
             let num1 = 0;
             let num2 = 0;
             let operator = '';
-            let open = false;
-            // let op = false;
-            // let end = 0;
+            let open = true;
+            let end1 = 0;
             for (let i = 0; i < start.value.length; i++) {
-
-                if (start.value[i] > 0 && start.value[i] <= 9) {
-                    arr.push(start.value[i]);
-                    console.log(arr);
-                    // op = true;
+                if (open) {
+                    if (start.value[i] >= 0 && start.value[i] <= 9) {
+                        arr.push(start.value[i]);
+                    }
+                    if (start.value[i] == '.') {
+                        arr.push(start.value[i]);
+                    }
+                }
+                if (open == false) {
+                    if (start.value[i] >= 0 && start.value[i] <= 9) {
+                        arr.push(start.value[i]);
+                    }
+                    if (start.value[i] == '.') {
+                        arr.push(start.value[i]);
+                    }
+                    if (start.value[i] == '+' || start.value[i] == '-' || start.value[i] == '/' || start.value[i] == '*') {
+                        let str = arr.join('');
+                        num2 = Number(str);
+                        open = true;
+                        if (num2 != 0) {
+                            if (operator == '+') {
+                                end1 = num1 + num2;
+                                num1 = end1;
+                                open = false;
+                                arr = [];
+                                arr[0] = num1;
+                            }
+                            if (operator == '-') {
+                                end1 = num1 - num2;
+                                num1 = end1;
+                                open = false;
+                                arr = [];
+                                arr[0] = num1;
+                            }
+                            if (operator == '*') {
+                                end1 = num1 * num2;
+                                num1 = end1;
+                                open = false;
+                                arr = [];
+                                arr[0] = num1;
+                            }
+                            if (operator == '/') {
+                                end1 = num1 / num2;
+                                num1 = end1;
+                                open = false;
+                                arr = [];
+                                arr[0] = num1;
+                            }
+                        }
+                    }
                 }
                 if (start.value[i] == '+' || start.value[i] == '-' || start.value[i] == '/' || start.value[i] == '*') {
                     operator = start.value[i];
-                    var str = arr.join('');
+                    let str = arr.join('');
                     num1 = Number(str);
-                    // console.log(operator);
-                    console.log(num1);
-                    // open = true;
+                    open = false;
+                    arr = [];
                 }
             }
+            let str = arr.join('');
+            num2 = Number(str);
+            open = true;
+            if (operator == '+') {
+                end1 = num1 + num2;
+                num1 = end1;
+                return end1;
+            }
+            if (operator == '-') {
+                end1 = num1 - num2;
+                num1 = end1;
+                return end1;
+            }
+            if (operator == '*') {
+                end1 = num1 * num2;
+                num1 = end1;
+                return end1;
+            }
+            if (operator == '/') {
+                end1 = num1 / num2;
+                num1 = end1;
+                return end1;
+            }
         }
-        // 判断数字在0 - 9 之间，追加到数组里面，如果遍历到运算符，就把数组内的数字进行运算
+
     </script>
 </body>
 
