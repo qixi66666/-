@@ -42,7 +42,9 @@
             margin-left: 450px;
         }
 
-        .box .start {}
+        .box .start {
+            font-size: 45px;
+        }
 
         ul li {
             margin: 30px;
@@ -58,6 +60,14 @@
 
         ul li:hover {
             background-color: #888;
+        }
+
+        #ac {
+            background-color: orange;
+        }
+
+        #res {
+            background-color: skyblue;
         }
     </style>
 </head>
@@ -83,9 +93,9 @@
             <li class="operator">-</li>
             <li class="num">0</li>
             <li class="operator">.</li>
-            <li class="result">=</li>
+            <li class="result" id="res">=</li>
             <li class="operator">+</li>
-            <li class="AC">AC</li>
+            <li class="AC" id="ac">AC</li>
         </ul>
     </div>
     <script>
@@ -123,63 +133,44 @@
             end.value = start.value + '=';
             start.value = myeval(start.value);
         }
+
         function myeval(e) {
-            let arr = [];
+            let str = '';
             let num1 = 0;
             let num2 = 0;
             let operator = '';
-            let open = true;
-            let end1 = 0;
+            let init = true;
             function calculate() {
                 if (operator == '+') {
-                    end1 = num1 + num2;
-                    num1 = end1;
-                }
-                if (operator == '-') {
-                    end1 = num1 - num2;
-                    num1 = end1;
-                }
-                if (operator == '*') {
-                    end1 = num1 * num2;
-                    num1 = end1;
-                }
-                if (operator == '/') {
-                    end1 = num1 / num2;
-                    num1 = end1;
+                    num1 += num2;
+                } else if (operator == '-') {
+                    num1 -= num2;
+                } else if (operator == '*') {
+                    num1 *= num2;
+                } else if (operator == '/') {
+                    num1 /= num2;
                 }
             }
-            for (let i = 0; i < start.value.length; i++) {
-                if ((start.value[i] >= 0 && start.value[i] <= 9) || start.value[i] == '.') {
-                    arr.push(start.value[i]);
+            for (let i = 0; i < e.length; i++) {
+                if ((e[i] >= 0 && e[i] <= 9) || e[i] == '.') {
+                    str += e[i];
                 }
-                if (open == false) {
-                    if (start.value[i] == '+' || start.value[i] == '-' || start.value[i] == '/' || start.value[i] == '*') {
-                        let str = arr.join('');
+                if (e[i] == '+' || e[i] == '-' || e[i] == '/' || e[i] == '*') {
+                    if (!init) {
                         num2 = Number(str);
-                        open = true;
-                        if (num2 != 0) {
-                            calculate();
-                            open = false;
-                            arr = [];
-                            arr[0] = num1;
-                        }
+                        calculate();
+                    } else {
+                        num1 = Number(str);
+                        init = false;
                     }
-                }
-                if (start.value[i] == '+' || start.value[i] == '-' || start.value[i] == '/' || start.value[i] == '*') {
-                    operator = start.value[i];
-                    let str = arr.join('');
-                    num1 = Number(str);
-                    open = false;
-                    arr = [];
+                    operator = e[i];
+                    str = '';
                 }
             }
-            let str = arr.join('');
             num2 = Number(str);
-            open = true;
             calculate();
-            return end1
+            return num1;
         }
-
     </script>
 </body>
 
