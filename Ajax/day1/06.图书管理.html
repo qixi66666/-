@@ -35,6 +35,7 @@
 
       <button id="btnAdd" class="btn btn-primary">添加</button>
 
+
     </div>
   </div>
 
@@ -78,6 +79,7 @@
       // 通过代理的方式为动态添加的元素绑定点击事件
       $('tbody').on('click', '.del', function () {
         var id = $(this).attr('data-id')
+        // 获取自定义属性的值
         $.get('http://www.liulongbin.top:3006/api/delbook', { id: id }, function (res) {
           if (res.status !== 200) return alert('删除图书失败！')
           getBookList()
@@ -98,7 +100,7 @@
           $('#iptBookname').val('')
           $('#iptAuthor').val('')
           $('#iptPublisher').val('')
-          // 清空文本框
+          // 添加完之后清空文本框
         })
       })
     })

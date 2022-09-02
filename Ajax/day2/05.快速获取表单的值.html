@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./lib/jquery.js"></script>
+</head>
+
+<body>
+
+  <form action="/login" id="f1">
+    <input type="text" name="user_name" />
+    <input type="password" name="password" />
+    <button type="submit">提交</button>
+  </form>
+
+  <script>
+    $(function () {
+      // 第一种方式
+      /* $('#f1').submit(function (e) {
+        e.preventDefault()
+        var data = $(this).serialize()
+        // 在使用serialize()快速获取表单数据时，必须为每个表单元素添加name属性
+
+        console.log(data)
+      }) */
+
+      // 第二种方式
+      $('#f1').on('submit', function (e) {
+        e.preventDefault()
+        var data = $('#f1').serialize()
+        console.log(data)
+      })
+    })
+  </script>
+
+</body>
+
+</html>

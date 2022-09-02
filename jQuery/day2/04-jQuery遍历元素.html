@@ -28,12 +28,13 @@
                 // console.log(index);
                 // console.log(i);
                 // 回调函数第二个参数一定是 dom元素对象 也是自己命名
-                // console.log(domEle);
+                console.log(domEle);
                 // domEle.css("color"); dom对象没有css方法
                 $(domEle).css("color", arr[i]);
                 sum += parseInt($(domEle).text());  //转换成数字型相加
             })
             console.log(sum);
+
 
 
 
@@ -49,13 +50,13 @@
 
 
             // })
-            $.each({
-                name: "andy",
-                age: 18
-            }, function (i, ele) {
-                console.log(i); // 输出的是 name age 属性名
-                console.log(ele); // 输出的是 andy  18 属性值
-            })
+            //     $.each({
+            //         name: "andy",
+            //         age: 18
+            //     }, function (i, ele) {
+            //         console.log(i); // 输出的是 name age 属性名
+            //         console.log(ele); // 输出的是 andy  18 属性值
+            //     })
         })
     </script>
 </body>

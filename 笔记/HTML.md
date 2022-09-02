@@ -239,4 +239,33 @@
 
 # 栈：它是一种受限的线性表，后进先出
 
--
+# AJAX
+
+- form 表单属性
+  - `action`  action属性用来规定当提交表单时向何处发送表单数据
+  - `target`  target属性用来规定在何处打开action URL
+      值  _blank   在新窗口中打开
+          _self    默认，在相同的框架中打开
+  - `method`  method属性用来规定以何种方式把表单数据提交到action URL
+      值  get      通过URL地址的形式，把表单数据提交到action URL
+          post     适合提交大量的复杂的或者包含文件上传的数据，常用。
+  - `enctype`  enctype属性用来规定在发送表单数据之前如何对数据进行编码
+      值  如果涉及到文件上传的操作时，必须将值设置为multipart/form-data
+
+- URL的编码与解码
+- encodeURL()  编码的函数
+- decodeURL()  解码的函数
+
+# JSON
+
+- JSON就是javascript对象和数组的字符串表示法，它使用文本表示一个JS对象或数组的信息。因此，JSON的本质是字符串。
+
+- 作用：JSON是一种轻量级的文本数据交换格式，在作用上类似于XML，专门用于储存和传输数据，但是JSON比XML更小、更快、更易解析。
+
+- 数据交换格式
+- JSON.parse()       JSON字符串转换为JSON对象
+- JSON.stringify()   JSON对象转换为JSON字符串
+
+- 序列化和反序列化
+- 把数据对象转换为字符串的过程，叫做序列化。
+- 把字符串转换为数据对象的过程，叫做反序列化。
