@@ -300,3 +300,25 @@
 - 2.响应头部
 - 3.空行
 - 4.响应体
+
+# git
+
+- git help config            获取命令的帮助手册
+- git config -h              获取命令的快速参考
+
+- git init                   初始化 git 仓库
+- git status                 查询git中文件的状态
+- git status -s              以精简的方式显示文件的状态
+- git add 文件名              跟踪文件，暂存
+- git commit -m "描述信息"    提交
+
+- git checkout -- 文件名      撤销
+- git add .                  将新增或者修改后的文件加入暂存区中
+- git reset HEAD             移除文件
+- git commit -a -m           跳过暂存区直接提交到仓库
+- git rm -f 文件名            从Git仓库和工作区同时移除文件
+- git rm --cached 文件名      只从Git仓库中移除文件，但保留工作区中的文件
+- git log                     按时间先后顺序序列出所有的提交历史
+- git log -2                  只展示最近的两条提交历史
+
+- git 忽略文件 .gitignore
