@@ -57,7 +57,6 @@
       xhr.upload.onload = function () {
         $('#percent').removeClass().addClass('progress-bar progress-bar-success')
       }
-
       xhr.open('POST', 'http://www.liulongbin.top:3006/api/upload/avatar')
       xhr.send(fd)
 

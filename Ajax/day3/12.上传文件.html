@@ -24,6 +24,7 @@
     btnUpload.addEventListener('click', function () {
       // 3. 获取到用户选择的文件列表
       var files = document.querySelector('#file1').files
+      // .files  获取文件的数组
       if (files.length <= 0) {
         return alert('请选择要上传的文件！')
       }

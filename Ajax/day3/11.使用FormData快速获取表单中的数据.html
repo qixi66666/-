@@ -21,10 +21,9 @@
     var form = document.querySelector('#form1')
 
     form.addEventListener('submit', function (e) {
-      // 阻止表单的默认提交行为
       e.preventDefault()
 
-      // 创建 FormData，快速获取到 form 表单中的数据
+      // 创建 FormData,快速获取到form表单中的数据
       var fd = new FormData(form)
 
       var xhr = new XMLHttpRequest()
@@ -32,9 +31,8 @@
       xhr.send(fd)
 
       xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          console.log(JSON.parse(xhr.responseText))
-        }
+        if (xhr.readyState === 4 && xhr.status === 200)
+          console.log(JSON.parse(xhr.responseText));
       }
     })
   </script>
