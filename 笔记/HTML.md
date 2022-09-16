@@ -322,3 +322,28 @@
 - git log -2                  只展示最近的两条提交历史
 
 - git 忽略文件 .gitignore
+
+- git clone 远程仓库的地址     将远程仓库克隆到本地
+- git baranch                 查看分支列表
+- git branch 分支名称          创建新分支
+- git checkout 分支名称        切换分支
+- git checkout -b 分支名称     创建指定名称的新分支，并立即切换到新分支上
+- git branch -d 分支名称       删除本地分支，不能处于要删除的当前分支上
+
+- 合并分支
+- 1.先切换到 main 主分支
+- git checkout main
+- 2.在 main 分支上运行 git merge 命令，将分支上的代码合并到 main 主分支上
+- git merge 分支名称
+
+- git push -u 远程仓库的别名origin  新分支名称      将本地分支推送到远程仓库
+- git remote show 远程仓库名称   查看远程仓库中所有的分支列表
+- git checkout 远程分支的名称    跟踪分支，把远程仓库中的分支下载到本地仓库中
+- git pull                     把远程分支最新的代码下载到本地对应的分支中
+- git push 远程仓库名称 --delete 远程分支名称     删除远程分支
+- origin 远程仓库默认名称
+
+# node.js
+
+- node.js是一个基于 chrome v8 引擎的 javascript 运行环境
+- 运行环境是指代码正常运行所需的必要环境
