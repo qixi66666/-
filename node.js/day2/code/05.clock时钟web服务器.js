@@ -18,12 +18,14 @@ server.on('request', (req, res) => {
   // const fpath = path.join(__dirname, url)
   // 5.1 预定义一个空白的文件存放路径
   let fpath = ''
+  // 根路径
   if (url === '/') {
     fpath = path.join(__dirname, './clock/index.html')
   } else {
     //     /index.html
     //     /index.css
     //     /index.js
+    // 非根路径
     fpath = path.join(__dirname, '/clock', url)
   }
 

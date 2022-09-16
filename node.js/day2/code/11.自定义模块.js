@@ -5,7 +5,7 @@ const age = 20
 // 向 module.exports 对象上挂载 username 属性
 module.exports.username = 'zs'
 // 向 module.exports 对象上挂载 sayHello 方法
-module.exports.sayHello = function() {
+module.exports.sayHello = function () {
   console.log('Hello!')
 }
 module.exports.age = age
