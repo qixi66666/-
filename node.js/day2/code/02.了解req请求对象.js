@@ -1,6 +1,7 @@
 const http = require('http')
 const server = http.createServer()
 // req 是请求对象，包含了与客户端相关的数据和属性
+// res 是响应对象，向客户端发送指定的内容，并结束这次请求的处理过程
 server.on('request', (req, res) => {
   // req.url 是客户端请求的 URL 地址
   const url = req.url

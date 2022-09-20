@@ -347,3 +347,43 @@
 
 - node.js是一个基于 chrome v8 引擎的 javascript 运行环境
 - 运行环境是指代码正常运行所需的必要环境
+
+# 包
+
+- npm -v                         查询包管理工具版本号
+- npm install + 包的完整名称      在项目中安装包的命令
+- npm i + 包的完整名称            在项目中安装包的命令
+- npm init -y                    在执行命令所处的目录中，快速新建 package.json 文件（只能在英文的目录下成功运行）
+- npm uninstall 包的完整名称      卸载指定的包
+
+- 包管理配置文件
+- 在项目跟目录在，创建一个 package.json 的配置文件，可以记录项目中安装了那些包，从而方便剔除了 node_modules （第三方包）目录之后，在团队成员之间共享项目的源代码。
+- 注意：今后在项目开发中，一定要把 node_modules 文件夹，添加到 .gitignore 忽略文件中
+- package.json 文件中，有一个dependencies 节点，专门用来记录使用 npm install 命令安装了哪些包
+
+- 如果某些包旨在项目开发阶段用，建议把这些包记录到 devDependencies 节点中，如果某些包在开发和项目上线之后都用到，建议记录到 dependencies 节点中
+- `npm i 包名 -D`
+- `npm install 包名 --save-dev`
+
+- 解决下包速度慢的问题
+- npm config get registry      查看当前的下包镜像源
+- npm config set registry=<https://registry.npm.taobao.org/>
+
+- i5ting_toc                            可以把md文档转为html页面的小工具
+- npm install -g i5ting_toc             安装为全局包
+- i5ting_toc -f 要转换的md文件路径 -o     md转html
+
+# Express
+
+- Express 是基于Node.js 平台，快速、开放、极简的 Web 开发框架
+- 本质就是一个第三方的包，快速创建服务器
+
+- 自定义模块加载机制
+- 补全 .js 扩展名
+- 补全 .json 扩展名
+- 补全 .node 扩展名
+
+# 路由
+
+- 路由就是映射关系，在Express中，路由指的是客户端请求和服务器处理函数之间的关系
+- 请求类型、请求的URL地址、处理函数三部分组成
