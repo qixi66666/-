@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/qixi66666/-#readme",
   "dependencies": {
-    "express-session": "^1.17.3"
+    "express-session": "^1.17.3",
+    "joi": "^17.6.1"
   }
 }

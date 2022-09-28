@@ -2,7 +2,7 @@
 const express = require('express')
 // 创建服务器的实例对象
 const app = express()
-const joi = require('@hapi/joi')
+const joi = require('joi')
 
 // 导入并配置 cors 中间件
 const cors = require('cors')
