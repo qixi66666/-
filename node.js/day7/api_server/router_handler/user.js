@@ -48,9 +48,6 @@ exports.regUser = (req, res) => {
   })
 }
 
-
-
-
 // 登录的处理函数
 exports.login = (req, res) => {
   // 接收表单的数据
@@ -64,7 +61,7 @@ exports.login = (req, res) => {
     // 执行 SQL 语句成功，但是获取到的数据条数不等于 1
     if (results.length !== 1) return res.cc('登录失败！')
 
-    // TODO：判断密码是否正确       bcrypt.compareSync：用户提交的密码和数据库中的加密密码进行对比
+    // TODO：判断密码是否正确
     const compareResult = bcrypt.compareSync(userinfo.password, results[0].password)
     if (!compareResult) return res.cc('登录失败！')
 
@@ -76,7 +73,7 @@ exports.login = (req, res) => {
     res.send({
       status: 0,
       message: '登录成功！',
-      token: 'Bearer ' + tokenStr,
+      token:  'Bearer ' + tokenStr,
     })
   })
 }
