@@ -362,8 +362,7 @@
 - package.json 文件中，有一个dependencies 节点，专门用来记录使用 npm install 命令安装了哪些包
 
 - 如果某些包旨在项目开发阶段用，建议把这些包记录到 devDependencies 节点中，如果某些包在开发和项目上线之后都用到，建议记录到 dependencies 节点中
-- `npm i 包名 -D`
-- `npm install 包名 --save-dev`
+- `npm i 包名 -D`    or    `npm install 包名 --save-dev`
 
 - 解决下包速度慢的问题
 - npm config get registry      查看当前的下包镜像源
@@ -476,3 +475,26 @@
 - secret 密钥
 - 1：当生成 JWT 字符串的时候，需要使用 secret 密钥对用户的信息进行加密，最终得到加密的 JWT 字符串
 - 2：当把 JWT 字符串解析还原成 JSON 对象的时候，需要用 secret 密钥进行解密
+
+# 前端工程化
+
+- 前端工程化是指在企业级的前端项目开发中，把前端开发所需的工具、技术、流程、经验等进行规范化、标准化
+
+- webpack 是前端项目工程化的具体解决方案
+- 它提供了友好的前端模块化开发支持，以及代码压缩混淆、处理浏览器端javascript的兼容性、性能优化等强大的功能
+
+- webpack 默认打包入口文件为 src -> index.js
+- webpack 默认的输出文件路径为 dist -> main.js
+- 注意：可以在 webpack.config.js 中修改打包的默认约定
+- npm install webpack-dev-server@3.11.2 -D   自动更新打包
+- npm install html-webpack-plugin@5.3.2 -D   主要作用就是在webpack构建后生成html文件，并且自动注入打包的 bundle.js 文件
+- vue-cli 工具会自动配置好 webpack
+
+- loader 概述
+- 在实际开发过程中，webpack 默认只能打包处理以 js 后缀名结尾的模块，其他非 js 后缀名结尾的模块 webpack 默认处理不了，需要调用 loader 加载器才能正常打包，否则会报错。
+- 当 webpack 处理不了的时候，会查找 webpack.config.js 这个配置文件，看 moudule.rules 数组中，是否配置了相对应的 loader 加载器。
+- css-loader 可以打包处理.css 相关的文件
+- less-loader 可以打包处理.less 相关的文件
+- babel-loader 可以打包处理. webpack 无法处理的高级 JS 语法
+
+- npm i url-loader@4.1.1 file-loader@6.2.0 -D 处理 url 路径相关的文件
