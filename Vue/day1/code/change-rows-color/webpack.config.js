@@ -17,7 +17,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
   // 在开发调试阶段，建议大家都把 devtool 的值设置为 eval-source-map
   // devtool: 'eval-source-map',
-  // 在实际发布的时候，建议大家把 devtool 的值设置为 nosources-source-map 或直接关闭 SourceMap
+  // 在实际发布的时候，建议大家把 devtool 的值设置为 nosources-source-map (只定位行数不暴露源码) 或直接关闭 SourceMap 
   devtool: 'nosources-source-map',
   // mode 代表 webpack 运行的模式，可选值有两个 development 和 production
   // 结论：开发时候一定要用 development，因为追求的是打包的速度，而不是体积；
