@@ -665,3 +665,5 @@
 3. vue项目的运行流程
 
 - 在工程化的项目中， vue 要做的事情：通过 main.js 把 APP.vue 渲染到 index.html 的指定区域中
+
+props 组件冲突
