@@ -1,7 +1,6 @@
 {
   "name": "code",
   "version": "1.0.0",
-  "description": "",
   "main": "node.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,5 +21,7 @@
     "express-session": "^1.17.3",
     "joi": "^17.6.1",
     "jsonwebtoken": "^8.5.1"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
