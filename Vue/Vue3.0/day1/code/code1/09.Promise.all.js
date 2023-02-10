@@ -6,6 +6,12 @@ const promiseArr = [
   thenFs.readFile('./files/1.txt', 'utf8'),
 ]
 
+// 全选机制
+// Promise.all(promiseArr).then(result => {
+//   console.log(result)
+// })
+
+// 赛跑机制
 Promise.race(promiseArr).then(result => {
   console.log(result)
 })
