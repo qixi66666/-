@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import head from '../components/header/Head.vue'
 
+
 Vue.use(VueRouter)
 
 const routes = [

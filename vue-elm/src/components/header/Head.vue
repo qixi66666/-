@@ -2,6 +2,13 @@
   <header>
     <span class="left">elm</span>
     <span class="right">登录|注册</span>
+    <div class="city_tip">
+      <span class="city_left">当前定位城市：</span>
+      <span class="city_right">定位不准时，请在城市列表中选择</span>
+    </div>
+    <a href="#/city/15">
+      <span class="country">西安</span>
+    </a>
   </header>
 </template>
 
@@ -44,5 +51,39 @@ header {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.city_tip {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.45rem;
+  padding: 0 0.45rem;
+  margin-top: 2.5rem;
+}
+
+.city_left {
+  font-size: 0.55rem;
+  color: #666;
+}
+
+.city_right {
+  font-weight: 900;
+  font-size: 0.475rem;
+  color: #9f9f9f;
+}
+
+.country {
+  color: #3190e8;
+}
+
+a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.8rem;
+  padding: 0 0.45rem;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 2px solid #e4e4e4;
+  font: 0.75rem/1.8rem Microsoft YaHei;
 }
 </style>
